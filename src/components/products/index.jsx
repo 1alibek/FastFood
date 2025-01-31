@@ -105,7 +105,7 @@ const Products = () => {
         </div>
       </header>
       <main className="bg-[#edeff3] w-full h-[100vh] border border-gray-100">
-        <div className="py-2 bg-white flex items-center justify-around mt-6">
+        <div className="py-2 bg-white grid grid-cols-5 pl-12 mt-6">
           <p className="text-[11px] font-bold">Maxsulot</p>
           <p className="text-[11px] font-bold border-l-2 border-gray-300 pl-2">
             Kategoriya
@@ -116,7 +116,7 @@ const Products = () => {
           <p className="text-[11px] font-bold border-l-2 border-gray-300 pl-2">
             Qo’shimcha
           </p>
-          <p className="text-[11px] font-bold border-l-2 border-gray-300 pl-2">
+          <p className="text-[11px] font-bold border-l-2 border-gray-300 pl-2 ml-12">
             ACTION
           </p>
         </div>
@@ -192,7 +192,7 @@ const Products = () => {
           {userData.map((value) => {
             return (
               <div key={value.id}>
-                <div className="flex items-center justify-between px-[70px] bg-white py-2 mt-3 ">
+                <div className="grid grid-cols-5 pl-12 bg-white py-2 mt-3 ">
                   <div className="flex items-center gap-4">
                     <img src={burger} alt="" />
                     <h1>{value.productName}</h1>
@@ -200,7 +200,7 @@ const Products = () => {
                   <h1>{value.category}</h1>
                   <h1>{value.price} UZS</h1>
                   <h1>{value.extra}</h1>
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-4 pl-12">
                     <MdOutlineEdit />
                     <button onClick={() => handleDeleteProduct(value.id)}>
                       <RiDeleteBinLine />
